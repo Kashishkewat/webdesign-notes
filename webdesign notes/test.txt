@@ -1,0 +1,55 @@
+let n=47;
+if(n%2==0 && n%5==0)
+{
+   console.log("n is divisible by 2and 5");
+
+
+}
+
+
+else
+{ console.log(" n is not divisible by both the digits");
+
+}
+     
+
+
+
+
+let i=436;
+if(i>=50 && i%15==0)
+    {
+
+      console.log("number is greater then 50 and also divisible by 15 ");
+    }
+else
+{
+   console.log (" number is not greater then 50 and also not divisible by 15");
+}
+
+
+
+
+
+for( let n=5;n<=15;n++)
+{
+
+ for(let i=1;i<=10;i++)
+   {
+      console.log(n,"*",i,"=",n*i);
+   }
+console.log("_________________________________")
+}
+
+
+
+
+let a=11;
+if(a%1==0 && a%2!=0)
+{
+   console.log(" number is prime");
+}
+else {
+   console.log("not prime");
+}
+

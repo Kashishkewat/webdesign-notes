@@ -1,0 +1,366 @@
+
+text=input("enter the text to encrypt:")
+while True:
+    try:
+        shift=int(input("enter the shift value(1_25):"))
+        if 1<=shift<=25:
+            break
+        else:
+            print('invalid shift value .Please enter an number between 1 to 25')
+    except ValueError:
+        print("invalid input .Please enter an integer")
+    
+encoded_text=""
+for char in text:
+        if "a"<=char<="z":
+            shift_char=ord(char)+shift
+            if shift_char>ord('z'):
+                shift_char-=26
+            encoded_text +=chr(shift_char)    
+        elif 'A'<=char<="Z":
+            
+            shift_char=ord(char)+shift
+            if shift_char>ord('Z'):
+                shift_char-=26
+            encoded_text +=chr(shift_char)
+        else:
+            encoded_text+=char
+print("encoded text:",encoded_text)            
+
+
+text1=input("enter the first text:")
+text2=input("enter the second text:")
+processed_text1=""
+for char in text1:
+    if char !='':
+        processed_text1 +=char.lower()
+        
+processed_text2=""
+for char in text2:
+    if char !='':
+        processed_text2 +=char.lower()
+if processed_text1 ==''and processed_text2 == '':
+    print("two empty strings are not anagarms")
+else:
+    list_text1=[]
+    for char in processed_text1:
+        list_text1.append(char)
+    
+    n1=0
+    for _ in list_text1:
+        n1 +=1
+    
+    for i in range(n1):
+        for j in range(0,n1-i-1):
+            if list_text1[j]>list_text1[j+1]:
+                temp=list_text1[j]
+                list_text1[j]=list_text1[j+1]
+                list_text1[j+1]=temp
+                
+                
+                
+    list_text2=[]
+    for char in processed_text2:
+        list_text2.append(char)
+        
+    n2=0
+    for _ in list_text2:
+        n2+=1
+    for i  in range(n2):
+        for j in range(0,n2-i-1):
+            if list_text2[j]>list_text2[j+1]:
+                temp=list_text2[j]
+                list_text2[j]=list_text2[j+1]
+                list_text2[j+1]=temp
+    is_anagram=True
+    if n1!=n2:
+        is_anagram=False
+    else:
+        for i in range(n1):
+            if list_text1[i]!=list_text2[i]:
+                is_anagram=False
+                break
+    if is_anagram:
+        print("the enter texts are anagram")
+    else:
+        print("the ente texts is not anagram")
+                
+        
+                
+        user = input("Enter your birthday in yyyymmdd format: ")
+sum_of_digits = sum(int(digit) for digit in user)
+
+# Reduce to single digit (optional)
+while sum_of_digits >= 10:
+    sum_of_digits = sum(int(digit) for digit in str(sum_of_digits))
+
+print("Final digit sum is:", sum_of_digits)
+
+
+# Sample Sudoku puzzle (0 means empty cell)
+sudoku_board = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+    
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+    
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 4, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 8, 0, 0, 7, 9]
+]
+
+def print_board(board):
+    for i in range(len(board)):
+        if i % 3 == 0 and i != 0:
+            print("-" * 21)
+        for j in range(len(board[0])):
+            if j % 3 == 0 and j != 0:
+                print("|", end=" ")
+            print(board[i][j] if board[i][j] != 0 else '.', end=" ")
+        print()
+
+def is_valid(board, row, col, num):
+    # Check row
+    if num in board[row]:
+        return False
+    # Check column
+    if num in [board[i][col] for i in range(9)]:
+        return False
+    # Check box
+    box_x = (col // 3) * 3
+    box_y = (row // 3) * 3
+    for i in range(box_y, box_y + 3):
+        for j in range(box_x, box_x + 3):
+            if board[i][j] == num:
+                return False
+    return True
+
+def play_sudoku():
+    while True:
+        print_board(sudoku_board)
+        try:
+            row = int(input("Enter row (0-8): "))
+            col = int(input("Enter column (0-8): "))
+            num = int(input("Enter number (1-9): "))
+            if sudoku_board[row][col] != 0:
+                print("Cell is already filled!")
+                continue
+            if is_valid(sudoku_board, row, col, num):
+                sudoku_board[row][col] = num
+            else:
+                print("Invalid move! Try again.")
+        except (ValueError, IndexError):
+            print("Invalid input. Please use numbers within range.")
+        if all(0 not in row for row in sudoku_board):
+            print("🎉 Sudoku Completed!")
+            break
+
+play_sudoku()
+def read_int(prompt, min, max):
+    #
+    # Write your code here.
+    #
+    while True:
+        try:
+            value=int(input(prompt))
+            if min<=value<=max:
+                return value
+            else:
+                print("Error :Please enter number between ",min,"and",max)
+        except ValueError:
+            print("invalid input")
+
+
+v = read_int("Enter a number from -10 to 10: ", -10, 10)
+
+print("The number is:", v)
+
+class QueueError(IndexError):  # Choose base class for the new exception.
+    #
+    #  Write code here
+    #
+    pass
+
+class Queue:
+    def __init__(self):
+        self.__list=[]
+    def put(self, elem):
+        #
+        # Write code here
+        #
+        self.__list.append(elem)
+
+    def get(self):
+        #
+        # Write code here
+        #
+
+        if len(self.__list)==0:
+            raise QueueError("Queue is empty!")
+        return self.__list.pop(0)    
+        
+            
+que = Queue()
+que.put(1)
+que.put("dog")
+que.put(False)
+try:
+    for i in range(4):
+        print(que.get())
+except:
+    print("Queue error")
+class QueueError(IndexError):
+    pass
+
+
+class Queue:
+    #
+    # Code from the previous lab.
+    #
+    def __init__(self):
+        self.queue=[]
+    def put(self,elem):
+        self.queue.insert(0,elem)
+    def get(self):
+        if len(self.queue)>0:
+            elem=self.queue[-1]
+            del self.queue[-1]
+            return elem
+        else:
+            raise QueueError
+
+class SuperQueue(Queue):
+    def isempty(self):
+        return len(self.queue)==0
+            
+
+que = SuperQueue()
+que.put(1)
+que.put("dog")
+que.put(False)
+for i in range(4):
+    if not que.isempty():
+        print(que.get())
+    else:
+        print("Queue empty")
+class MyClass:
+    pass
+
+
+obj = MyClass()
+obj.a = 1
+obj.b = 2
+obj.i = 3
+obj.ireal = 3.5
+obj.integer = 4
+obj.z = 5
+
+
+def incIntsI(obj):
+    for name in obj.__dict__.keys():
+        if name.startswith('i'):
+            val = getattr(obj, name)
+            if isinstance(val, int):
+                setattr(obj, name, val + 1)
+
+
+print(obj.__dict__)
+incIntsI(obj)
+print(obj.__dict__)
+class Timer:
+    def __init__(self,hour=0,mins=0,secs=0):
+        self.hour=hour
+        self.mins=mins
+        self.secs=secs
+
+    def __str__(self):
+        return f"{self.hour:02d}:{self.mins:02d}:{self.secs:02d}"
+
+
+    def next_second(self):
+        self.secs+=1
+        if self.secs==60:
+            self.secs=0
+            self.mins+=1
+            if self.mins==60:
+                self.mins=0
+                self.hour+=1
+                if self.hour==24:
+                    self.hour=0
+
+    def prev_second(self):
+        
+        self.secs-=1
+        if self.secs<0:
+            self.secs=59
+            self.mins-=1
+            if self.mins<0:
+                self.mins=59
+                self.hour-=1
+                if self.hour<0:
+                    self.hour=23
+
+timer = Timer(23, 59, 59)
+print(timer)
+timer.next_second()
+print(timer)
+timer.prev_second()
+print(timer)
+import math
+
+
+
+class Point:
+    def __init__(self, x=0.0, y=0.0):
+        self.x=x
+        self.y=y
+
+    def distance_from(self, other):
+        return math.sqrt((self.x -other.x)**2 +(self.y-other.y)**2)
+
+
+
+class Triangle:
+    def __init__(self, vertice1, vertice2, vertice3):
+        self.v1=vertice1
+        self.v2=vertice2
+        self.v3=vertice3
+        
+    def perimeter(self):
+        side1=self.v1.distance_from(self.v2)
+        side2=self.v2.distance_from(self.v3)
+        side3=self.v3.distance_from(self.v1)
+        return side1+side2+side3
+
+
+triangle = Triangle(Point(0, 0), Point(1, 0), Point(0, 1))
+print(triangle.perimeter())
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+
+def poly(x):
+    return 2 * x**2 - 4 * x + 2
+
+
+print_function([x for x in range(-2, 3)], poly)
+list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+

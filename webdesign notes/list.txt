@@ -1,0 +1,39 @@
+li=[897,667,768,876,678,432,678,7999]
+flag=False
+for i in li:
+    flag=False
+    for j  in range(2,i):
+        if i%j==0:
+            flag=True
+            break
+        
+    if flag:
+            print(f"{i} is composite")
+    else:
+         print(f"{i} is prime")
+
+li=[5,7,58,9,5,68,69,45,3,27]
+li2=[]
+li3=[]
+for i in li:
+    if i%2==0:
+        li2.append(i)
+    else:
+        li3.append(i)
+
+
+print(li2)
+print(li3)
+
+
+li=[1,2,3,4,6,45,78,34,90]
+max=li[0]
+min=li[0]
+for i in range(1,len(li)):
+   if li[i]<min:
+      min=li[i]
+   if li[i]>max:
+      max=li[i]
+print(f"{min} minimum number in the list")      
+print(f"{max} maximum number in the list")      
+  

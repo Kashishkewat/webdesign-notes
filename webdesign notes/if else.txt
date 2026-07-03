@@ -1,0 +1,95 @@
+let n=0;
+if(n>0)
+{
+    console.log("number is positive");
+}
+else if(n==0)
+{
+    console.log("zero")
+}
+else
+{
+
+    console.log("number is negtive");
+}
+   
+
+
+
+let votingAge =56;
+if(votingAge >65)
+    {
+        console.log("you can vote");
+    } 
+    else if(votingAge<40)
+        {
+
+            console.log("you are the voter");
+        }
+    else{
+        console.log("you can't vote");
+    }
+
+
+
+let q=90;
+if(q%2==0)
+{
+    console.log("even");
+}
+else
+{
+    console.log("odd");
+}
+
+
+let digit=100;
+if(digit%4==0)
+{
+    console.log("divisible by 4");
+}
+
+else
+{
+    console.log("not divisible by 4");
+
+}
+
+let marks=95;
+if(marks>=90)
+{
+    console.log("A+");
+}
+else if(marks>=85)
+{
+    console.log("A");
+}
+else if(marks>=75)
+{
+    console.log("B");
+
+}
+else if(marks>=65)
+{
+    console.log("C");
+}
+else if(marks>=45)
+    {
+        console.log("D");
+    }
+else if(marks>=25)
+{
+    console.log("F");
+}
+
+let n=256;
+if(n<=1)
+{
+    console.log("number in range");
+}
+else if(n>=100)
+{
+    console.log("number is not in range");
+}
+
+

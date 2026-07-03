@@ -1,0 +1,38 @@
+function AreaOfHome( l,w)
+
+{
+let Area =l*w;
+console.log("Area",Area);
+return Area;
+
+}
+let w=AreaOfHome(92,43)
+let theCostOfTiling=230;
+console.log (w * theCostOfTiling);
+
+
+
+let company={
+ companyname:"google",
+adderss:"1600 amphitheatre parway",
+emplpoyee:"298334734",
+salary:"5363737"
+
+
+
+}
+
+
+
+let a={
+
+    name:"jatin sharma",
+    city:"gujrat",
+    addree:"570,sai mandir ke pass ",
+}
+a.__proto__=company;
+
+console.log(a.name);
+console.log(a.city);
+console.log(a.adderss);
+console.log(a.companyname);

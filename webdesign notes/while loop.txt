@@ -1,0 +1,31 @@
+let n=123;
+let n2=n;
+let digits=0;
+
+while(n>0)
+{
+    digits++;
+    n=parseInt(n/10);
+}
+n=n2;
+let sum=0;
+while(n2>0)
+{
+    let remainder=n2 % 10;
+    sum += remainder ** digits;
+    n2=parseInt(n2/10);
+}
+console.log(sum);
+
+
+let sum =0;
+let currentNumber=1;
+const n=100;
+
+while(currentNumber<=n)
+{
+    sum +=currentNumber;
+    currentNumber++;
+}
+
+console.log(sum);

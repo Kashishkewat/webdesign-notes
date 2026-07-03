@@ -1,0 +1,194 @@
+function fun(x)
+{
+console.log(x);
+}
+fun("hello")
+
+
+function marks(h)
+{
+    console.log(h)
+
+
+}
+let arr=[7,8,9,60,5,76,54];
+marks(arr);
+
+
+function marks(h)
+{
+    h[2]=345;
+
+
+}
+let arr=[7,8,9,60,5,76,54];
+marks(arr);
+console.log(arr);
+
+function fun(v)
+{
+    console.log(v);
+}
+let obj={
+    Name:"kashish kewat",
+    Age:"20",
+    city:"indore",
+    profession:" web developer",
+};
+fun(obj)
+console.log(obj);
+
+
+function fun(a,b)
+{
+console.log("hello",a+b);
+}
+fun(3,9)
+
+
+function fun(x)
+{
+console.log(x);
+}
+let a=3;
+fun(a)
+
+
+function fun(x)
+{
+console.log(x);
+};
+let a=function()
+{
+    console.log("yeee");
+}
+fun(a)
+
+
+function fun(x)
+{
+x()
+};
+let a=function()
+{
+    console.log("yeee");
+}
+fun(a)
+
+let a= function ()
+{
+ console.log("hello");
+
+}
+setInterval(a,300)
+
+function fun (x,y)
+{
+x()
+y()
+}
+function a()
+{
+    console.log("hello jatin");
+}
+function b()
+{
+    console.log("hello kashish");
+}
+fun(a,b)
+
+
+function fun (x,y)
+{
+console.log(x,y);
+}
+function a()
+{
+    console.log("hello jatin");
+}
+function b()
+{
+    console.log("hello kashish");
+}
+fun(a,b)
+
+function fun(a,b)
+{
+
+
+let multi=a*b;
+return multi;
+}
+let x=fun(4,9)
+console.log(x);
+
+
+
+function  school(x,y)
+{
+
+console.log("nice to meet you");
+}
+
+function a() {
+
+    console.log("hello guys");
+}
+function b(){
+    console.log(" hi by guys");
+}
+school(a,b)
+
+function  school(x,y)
+{
+
+console.log("nice to meet you");
+}
+
+function a() {
+
+    console.log("hello guys");
+}
+function b(){
+    console.log(" hi by guys");
+}
+school(a,b)
+
+
+function  school(x,y)
+{
+
+x()
+y()
+}
+
+function a() {
+
+    console.log("hello guys");
+}
+function b(){
+    console.log(" hi by guys");
+}
+school(a,b)
+
+
+
+
+
+
+
+function fun (y)
+
+{
+console.log(y);
+
+}
+let school={
+Name: "The Advent academy",
+Address:"near narmada bank barwaha(m.p) ",
+Contact:"6758954637",
+}
+fun(school.Contact
+
+    
+)

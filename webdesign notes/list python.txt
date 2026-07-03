@@ -1,0 +1,13 @@
+li=[1,2,34,5,6,7,89]
+num=int(input("guess the number:"))
+flag=False
+for i in li:
+  
+ if i==num:
+    flag=True
+    break
+if flag:
+  print(f"the number is in the list {num}")
+
+else:
+  print(f"the number is not on the list{num}")  

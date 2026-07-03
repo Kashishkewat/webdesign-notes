@@ -1,0 +1,31 @@
+let arr=[7,9,8,7,6,5,567,9,89,67,67];
+console.log(...arr);
+
+let arr=[5,7,3,2,10,9,8,6,];
+let max=arr[0];
+let min=arr[0];
+for(let i of arr)
+{
+if(i>max)
+{
+    max=i;
+}
+else if(i<min)
+{
+    min=i;
+}
+
+}
+console.log(max);
+console.log(min);
+
+
+let arr=[3,4,5,6,7,8,9]
+for(let i of arr)
+{
+    for(let j=1;j<=10;j++)
+    {
+        console.log(i,"*",j,"=",i*j);
+    }
+    console.log("_________");
+}

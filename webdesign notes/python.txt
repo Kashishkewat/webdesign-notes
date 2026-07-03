@@ -1,0 +1,188 @@
+h u #1. check number given is divisble by 5 or not?
+userinput =int (input("enter any number:"))
+if userinput%5==0:
+    print("number is divisble by 5")
+else:
+    print("number is not divisble by 5")
+
+#2. check the character given is in upper case and lower case?
+ 
+
+   ch= input("enter the character:")
+if ch>="A" and ch<="Z":
+    print("uppercase letter")
+else:
+    print("lowercase letter")
+# convert the fernite value in the celsius value?
+
+user= int(input(" the value in fernite:"))
+print(f"the value in c:",{(user-32)*5/9})
+
+#elif question
+temp=int(input("enter the temperature:"))
+if temp<0:
+    print('freezing weather')
+elif temp>=0 and temp<10:
+    print('very cold weather')
+elif temp>=10 and temp<20:
+    print("cold weather")
+elif temp>=20 and temp<30:
+    print("normal")
+elif temp>=30 and temp<40:
+    print("hot")
+else :
+    print("very hot")
+
+age=int(input('enter your age:'))
+gender=input('enter your gender:')
+if age>=18 and age<=25 and gender =="female":
+    print("your are eligible for women scholarships")
+elif  gender=="male":
+    print("your are not eligible for women scholarships")
+else:
+    print('your are not eligible for any scholarships ')        
+
+
+
+hardness=int (input("enter the hardness of steel:"))
+carboncontent=float(input("enter the carbon content of the steel:"))
+tensilestrength= int(input("enter the tensile strength:"))
+hh=False
+cc=False
+ts=False
+if hardness>=50:
+    hh=True
+if carboncontent<=0.7:
+    cc=True
+if tensilestrength>=5600:
+    ts=True
+if hh==True and cc==True and ts==True:
+    print('grade of steel is 10 ,all condition are true') 
+elif hh==True and cc==True and ts==False:
+    print("grade of steel is 9 ,first and second  condition is true")
+elif hh==False and cc==True and ts==True:
+    print("grade of the steel is 8, second and third condition is true ")
+elif hh==True and cc==False and ts==True:
+    print("grade io the steel is 7, first and third condition is true")
+elif hh==True or cc==True or ts==True:
+    print('grade of the steel is 6, only one condition is true')
+else:
+    print(' not any met condition')
+
+
+days=int(input(" late days in which books is submitted in the library :"))
+if days<=5:
+    print("if books is submitted 5 days late in the library the fine is 50 paise")
+elif 6<=days<=10:
+    print('fine will be 1 rupee')
+elif 10<days<=30:
+    print("fine will be 10 rupees")
+else:
+    print("memberships of library is cancel")           
+
+
+side1=int(input("enter the side1 of the triangle:"))
+side2=int(input("enter the side2 of the triangle:"))
+side3=int(input("enter the side3 of the triangle:"))
+if side1==side2 and side2==side3:
+    print("the triangle is equilateral")
+elif side1==side2 or side2==side3 or side3==side1:
+    print("the triangle is isosceles") 
+else:
+    print("the triangle is scalene")    
+
+
+
+
+phy=float(input("enter the marks of physics:"))
+che=float(input("enter the marks of chemsty:"))
+bio=float(input("enter the marks of biology:"))
+mm=float(input("enter the marks of maths:"))
+com=float(input("enter the marks of computer:"))
+percentage=(phy+che+bio+mm+com)*100/5
+if percentage>=90:
+    print("grade A")
+elif percentage>=80:
+    print("grade B")
+    
+elif percentage>=70: 
+    print("grade C")
+
+elif percentage>=60:  
+    print("grade D")
+
+elif percentage>=40:
+    print("grade E")
+
+else: 
+    print("grade F")
+
+
+
+num1=int(input("enter first number:"))
+num2=int(input("enter second number:"))
+num3=int(input("enter third number:"))
+if num1>num2 and num1>num3:
+    print('num1 is greater')
+elif num2>num1 and num2>num3:
+    print("num2 is greater")
+else:
+    print("num3 is greater")      
+
+
+
+a= int(input("enter the first number:"))
+b= int(input("enter the second number:"))
+c= int(input("enter the third number:"))
+if a>b:
+   if a>c:
+        print(f"{a} is greatest")
+   else:
+        print(f"{c} is greatest")
+else:
+    if b>c:
+        print(f"{b} is greatest")  
+    else:
+        print(f"{c} is greatest")  
+
+num=int(input("enter any number:"))
+even=0
+for i in range(1,num + 1):
+    if i%2==0:
+        print(f" {i} number is even")
+    else:
+        print(f" {i} number is odd")
+
+
+       a= int(input("enter any number:"))
+evensum=0
+oddsum=0
+for i in range(1,a+1):
+    if i%2==0:
+        evensum=evensum+i
+    else:
+        oddsum=oddsum+i
+    print(f"the sum all odd number:{oddsum}")        
+print(f"the sum all even number:{evensum}")        
+
+       
+num=int(input("enter any number:"))
+for i in range(1,11):
+    print(f"{num}*{i}={i*num}")
+
+num=int(input("enter any number:"))
+for i in  range (1,num+1):
+    print(f"{i}**{num}={i**num}")
+  
+    
+
+
+  
+            
+      
+
+
+    
+
+
+

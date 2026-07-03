@@ -1,0 +1,191 @@
+for(let i=0;i<=10;i++)
+{
+    for(let j=0;j<=5;j++)
+    {
+        console.log("hi");
+
+    }
+    console.log("_______________");
+}
+
+
+
+let a=""
+for( let i=0;i<5;i++)
+{
+for(let j=0;j<5;j++)
+{
+a+="*";
+}
+
+a += "\n"; 
+}
+console.log(a)
+
+
+
+let a=""
+for(let i=0;i<5;i++)
+{
+ for(let j=0;j<=i; j++)
+ {
+    a += "*"
+ }
+a += "\n"
+
+
+
+}
+
+for(let i=0;i<5;i++)
+{
+ for(let j=0;j<=i; j++)
+ {
+    a += "*"
+ }
+a += "\n"
+
+
+
+}
+console.log(a);
+
+
+
+let n=""
+for(let i=0;i<=5;i++)
+{
+for(let j=0;j<=i;j++)
+{
+    n+="*";
+}
+  n+="\n"
+}
+
+for(let i=0;i<=5;i++)
+{
+for(let j=0;j<=i;j++)
+{
+    n+="*";
+}
+  n+="\n"
+}
+console.log(n);
+
+
+
+let a="";
+for(let i=0;i<5; i++)
+   {  
+    for(let j=i;j<5;j++)
+        {
+            a+=" ";
+        }
+        for(let k=0;k<=i;k++)
+            {
+                a+="* ";
+
+            }
+            a+="\n";
+    } 
+    console.log(a);
+
+
+let a="";
+for(let i=0;i<5; i++)
+   {  
+    for(let j=0;j<=i;j++)
+        {
+            a+=" ";
+        }
+        for(let k=i;k<5;k++)
+            {
+                a+="* ";
+
+            }
+            a+="\n";
+    } 
+    console.log(a);
+
+
+
+
+let a=""
+for(let i=0;i<=5;i++)
+{
+
+for( let j=0;j<=i;j++)
+    {
+        a+="*"
+    }
+
+a+="\n"
+
+}
+for(let i=0;i<=5;i++)
+{
+
+for( let j=i;j<=5;j++)
+    {
+        a+="*"
+    }
+
+a+="\n"
+
+}
+console.log(a);
+
+let a=""
+for(let i=1;i<=6;i++)
+{
+for(let j=1;j<=i;j++)
+{
+    a+="*";
+}
+a+="\n"
+
+}
+ console.log(a);
+
+
+// Define a list of numbers
+const numbers = [5, 12, 8, 21, 3, 17, 29, 11];
+
+// Function to find the largest number in the list
+function findLargestNumber(arr) {
+    if (arr.length === 0) {
+        throw new Error('Array is empty');
+    }
+
+    // Initialize the largest number with the first element of the array
+    let largest = arr[0];
+
+    // Loop through the array
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    return largest;
+}
+
+// Find and print the largest number
+const largestNumber = findLargestNumber(numbers);
+console.log(`The largest number in the list is: ${largestNumber}`);
+
+
+
+
+
+
+
+for(let i=1;i<=5;i++)
+{
+for(let j=1;j<=10;j++)
+{
+    console.log(i,"*",j,"=",i*j);
+}
+console.log("_____________");
+}
+

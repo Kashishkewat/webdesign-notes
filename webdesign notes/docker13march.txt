@@ -1,0 +1,13 @@
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker 
+sudo systemctl enable docker 
+docker --version
+docker run 
+docker images
+docker ps
+docker ps -a list all containers
+docker run nginx run a container
+docker run -d nginx detched 
+docker run -d -p 80:80 nginx port mapping(host container)
+13 march 
